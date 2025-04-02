@@ -53,7 +53,7 @@ class Database {
     {
         $this->query = "select $fields ".$this->getQuery();
 
-        return $this->execute();
+        return $this->execute($this->fields);
 
     }
 
@@ -102,6 +102,7 @@ class Database {
         $statement = $this->connection->prepare($this->getQuery());
         $statement->execute($fields);
         $this->query = '';
+        $this->fields = [];
         return $statement->fetchAll();
     }
 }
