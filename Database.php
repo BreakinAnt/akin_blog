@@ -47,13 +47,14 @@ class Database {
         return $this;
     }
 
-    public function insert($model, Array $data)
+    public function insert($model, Array $data): int
     {
         $fields = implode(",",array_keys($data));
         $this->addFields($data);
         $this->query = "insert into $model($fields) values({$this->setVariables($data)})";
+        $this->execute($this->fields);
 
-        return $this->execute($this->fields);
+        return $this->connection->lastInsertId();
     }
 
     public function get($fields = "*")
