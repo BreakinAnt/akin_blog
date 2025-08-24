@@ -1,7 +1,7 @@
 <?php
 
 class Router {
-    public static function __callStatic($name, $arguments): void
+    public static function __callStatic($name, $arguments)
     {
         switch($name) {
             case 'get':
@@ -26,12 +26,10 @@ class Router {
             $function = 'index';
         }
 
-        require 'controllers/' . $controller . '.php';
+        require_once 'controllers/' . $controller . '.php';
 
         $controllerInstance = new $controller();
 
-        $controllerInstance->$function();
-
-        return;
+        return ['controller' => $controllerInstance, 'renderFunction' => $function];
     }
 }

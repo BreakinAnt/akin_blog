@@ -2,7 +2,7 @@
 
 return [
     '/' => Router::get('IndexController@index'),
-    '/about' => 'controllers/about.php',
+    '/about' => Router::get('IndexController@about'),
     '/notes' => 'controllers/notes.php',
     '/notes/create' => 'controllers/notes-create.php',
     '/note' => 'controllers/note.php',
