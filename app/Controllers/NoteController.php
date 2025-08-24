@@ -1,13 +1,15 @@
 <?php
 namespace App\Controllers;
 use App\Database;
+use App\Models\Note;
+
 class NoteController extends Controller
 {
     public function index()
     {
         $heading = 'Notes';
 
-        $notes = db()->from('notes')->get();
+        $notes = Note::all();
 
         $this->render('notes/index', compact('heading', 'notes', 'user'));
     }
@@ -17,6 +19,7 @@ class NoteController extends Controller
         $currentUser = 1;
         $heading = 'Note';
 
+        $note = (new Note())->where('id', $noteId);
         $note = db()->from('notes')->where('id', '=', $noteId)->getOrFail()[0];
         $user = db()->from('users')->where('id', '=', $note['user_id'])->getOrFail()[0];
 
