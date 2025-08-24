@@ -41,7 +41,9 @@ class Model {
     private function setAttributes($attributes): void
     {
         foreach($attributes as $key => $value) {
-            $this->$key = $value;
+            if (property_exists($this, $key)){
+                $this->$key = $value;
+            }
         }
     }
     
