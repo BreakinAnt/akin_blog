@@ -12,10 +12,10 @@
                 $inactiveClass  = 'class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"'; 
                 $activeClass    = 'class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page"';
               ?>
-              <a href="/" <?php echo urlIs("/") ? $activeClass : $inactiveClass ?> >Home</a>
-              <a href="/about" <?php echo urlIs("/about") ? $activeClass : $inactiveClass ?> >About</a>
-              <a href="/notes" <?php echo urlIs("/notes") ? $activeClass : $inactiveClass ?> >Notes</a>
-              <a href="/contact" <?php echo urlIs("/contact") ? $activeClass : $inactiveClass ?> >Contact</a>
+              <a href="/" <?php echo App\urlIs("/") ? $activeClass : $inactiveClass ?> >Home</a>
+              <a href="/about" <?php echo App\urlIs("/about") ? $activeClass : $inactiveClass ?> >About</a>
+              <a href="/notes" <?php echo App\urlIs("/notes") ? $activeClass : $inactiveClass ?> >Notes</a>
+              <a href="/contact" <?php echo App\urlIs("/contact") ? $activeClass : $inactiveClass ?> >Contact</a>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 <?php
+use App\Router;
 
 return [
     '/' => Router::get('IndexController@index'),

@@ -1,8 +1,8 @@
-<?php 
-
-// const BASE_PATH = __DIR__.'/../';
+<?php
 
 try {
+    require "autoloader.php";
+
     $config = require('config.php');
 
     require "helper.php";
@@ -11,9 +11,9 @@ try {
     require "Router.php";
     require "RouteServiceProvider.php";
 
-    RouteServiceProvider::boot();
+    App\RouteServiceProvider::boot();
 
-    abort();
+    App\abort();
 } catch (Throwable $e) {
     echo "Error: " . $e->getMessage();
     throw new Exception($e);

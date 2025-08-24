@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 class RouteServiceProvider
 {
     static function boot(): void

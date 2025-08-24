@@ -1,4 +1,6 @@
 <?php
+namespace App;
+
 function dd(...$vars)
 {
     $backtrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1);

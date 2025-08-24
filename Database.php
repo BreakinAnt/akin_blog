@@ -1,15 +1,16 @@
 <?php
+namespace App;
 class Database {
     private $connection, $query, $fields;
 
     public function __construct($config)
     {
-        $this->connection = new PDO(
+    $this->connection = new \PDO(
             "mysql:host={$config['database']['host']};port={$config['database']['port']};dbname={$config['database']['name']};charset={$config['database']['charset']}", 
             $config['database']['user'], 
             $config['database']['password'], 
             [
-                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+                \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
             ]
         );
         $this->query = "";

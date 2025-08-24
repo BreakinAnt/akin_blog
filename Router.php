@@ -1,4 +1,5 @@
 <?php
+namespace App;
 
 class Router {
     public static function __callStatic($name, $arguments)
@@ -12,23 +13,20 @@ class Router {
                 $isMethod = $_SERVER['REQUEST_METHOD'] === strtoupper($name);
                 break;
             default:
-                throw new BadMethodCallException("Method $name does not exist.");
-                break;
+                throw new \BadMethodCallException("Method $name does not exist.");
         }
 
         if(!$isMethod){
-            abort(Response::NOT_FOUND, 'Page Not Found');
+            \App\abort(Response::NOT_FOUND, 'Page Not Found');
         }
 
         [ $controller, $function ] = explode('@', $arguments[0]);
-        
         if(!$function) {
             $function = 'index';
         }
 
-        require_once 'controllers/' . $controller . '.php';
-
-        $controllerInstance = new $controller();
+        $controllerClass = 'App\\Controllers\\' . $controller;
+        $controllerInstance = new $controllerClass();
 
         return ['controller' => $controllerInstance, 'renderFunction' => $function];
     }
