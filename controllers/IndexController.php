@@ -16,6 +16,13 @@ class IndexController extends Controller {
         $this->render('about', compact('heading'));
     }
 
+    public function contact() 
+    {
+        $heading = 'Contact Us';
+
+        $this->render('contact', compact('heading'));
+    }
+
     public function test($test, $testa) 
     {
         dd($test, $testa);

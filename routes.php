@@ -2,10 +2,9 @@
 
 return [
     '/' => Router::get('IndexController@index'),
-    '/{test}/{testa}' => Router::get('IndexController@test'),
     '/about' => Router::get('IndexController@about'),
-    '/notes' => 'controllers/notes.php',
+    '/notes' => Router::get('NoteController@index'),
     '/notes/create' => 'controllers/notes-create.php',
-    '/note' => 'controllers/note.php',
-    '/contact' => 'controllers/contact.php'
+    '/note/{note_id}' => Router::get('NoteController@show'),
+    '/contact' => Router::get('IndexController@contact')
 ];
