@@ -1,16 +1,17 @@
 <?php
 
+use App\Providers\RouteServiceProvider;
+
 try {
     require "autoloader.php";
     require "helper.php";
     require "Database.php";
     require "Response.php";
     require "Router.php";
-    require "RouteServiceProvider.php";
 
-    App\RouteServiceProvider::boot();
+    RouteServiceProvider::boot();
 
-    App\abort();
+    abort();
 } catch (Throwable $e) {
     echo "Error: " . $e->getMessage();
     throw new Exception($e);
