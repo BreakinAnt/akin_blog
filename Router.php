@@ -17,7 +17,7 @@ class Router {
         }
 
         if(!$isMethod){
-            abort(Response::NOT_FOUND, 'Page Not Found');
+            return null;
         }
 
         [ $controller, $function ] = explode('@', $arguments[0]);
@@ -29,5 +29,14 @@ class Router {
         $controllerInstance = new $controllerClass();
 
         return ['controller' => $controllerInstance, 'renderFunction' => $function];
+    }
+
+    public static function group(...$routes)
+    {
+        foreach($routes as $route) {
+            if($route){
+                return $route;
+            }
+        }
     }
 }
