@@ -14,4 +14,11 @@ class IndexController extends Controller {
 
         $this->render('index', compact('heading'));
     }
+
+    public function about() 
+    {
+        $heading = 'About Us';
+
+        $this->render('about', compact('heading'));
+    }
 }
