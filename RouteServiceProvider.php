@@ -33,7 +33,9 @@ class RouteServiceProvider
                 $controller = $route['controller'];
                 $renderFunction = $route['renderFunction'];
 
-                $controller->$renderFunction();
+                $parameters = explode('/', trim($uri, '/'));
+
+                $controller->$renderFunction(...$parameters);
                 return;
             }
 
