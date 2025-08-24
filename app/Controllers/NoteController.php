@@ -14,9 +14,6 @@ class NoteController extends Controller
 
     public function show($noteId)
     {
-
-        $db = new Database();
-
         $currentUser = 1;
         $heading = 'Note';
 
