@@ -9,7 +9,7 @@ class NoteController extends Controller
 
         $notes = db()->from('notes')->get();
 
-        $this->render('notes', compact('heading', 'notes', 'user'));
+        $this->render('notes/index', compact('heading', 'notes', 'user'));
     }
 
     public function show($noteId)
@@ -20,13 +20,13 @@ class NoteController extends Controller
         $note = db()->from('notes')->where('id', '=', $noteId)->getOrFail()[0];
         $user = db()->from('users')->where('id', '=', $note['user_id'])->getOrFail()[0];
 
-        $this->render('note', compact('heading', 'note', 'user'));
+        $this->render('notes/show', compact('heading', 'note', 'user'));
     }
 
     public function create()
     {
         $heading = 'Create Note';
-        $this->render('notes-create', compact('heading'));
+        $this->render('notes/create', compact('heading'));
     }
 
     public function store()
