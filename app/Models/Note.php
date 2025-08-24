@@ -7,6 +7,6 @@ class Note extends Model {
 
     public function user(): User
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class)->first();
     }
 }

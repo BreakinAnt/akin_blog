@@ -27,20 +27,20 @@ class Model {
         return db()->from($instance->getTable())->get();
     }
 
-    public function where($column, $value, $comparator = '='): Model
+    public function where($column, $value, $comparator = '='): static|Model
     {
         $this->db->where($column, $comparator, $value);
         return $this;
     }
 
-    public function first(): Model
+    public function first(): static|Model
     {
         $data = $this->db->get()[0];
         $this->setAttributes($data);
         return $this;
     }
 
-    public function save(): Model
+    public function save(): static|Model
     {
         if (isset($this->id)) {
             //TODO: update logic
@@ -63,11 +63,11 @@ class Model {
         }
     }
     
-    protected function belongsTo($related, $foreignKey = null, $localKey = 'id'): Model
+    protected function belongsTo($related, $foreignKey = null, $localKey = 'id'): static|Model
     {
         $related = new $related();
         $foreignKey = $foreignKey ?? strtolower((new \ReflectionClass($related))->getShortName()).'_id';
 
-        return $related->where($localKey, $this->$foreignKey)->first();
+        return $related->where($localKey, $this->$foreignKey);
     }
 }
