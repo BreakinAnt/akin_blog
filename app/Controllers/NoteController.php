@@ -26,10 +26,6 @@ class NoteController extends Controller
         $note = $db->from('notes')->where('id', '=', $noteId)->getOrFail()[0];
         $user = $db->from('users')->where('id', '=', $note['user_id'])->getOrFail()[0];
 
-        if(!$note) {
-            \App\abort();
-        }
-
         $this->render('note', compact('heading', 'note', 'user'));
     }
 }

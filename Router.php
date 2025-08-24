@@ -17,7 +17,7 @@ class Router {
         }
 
         if(!$isMethod){
-            \App\abort(Response::NOT_FOUND, 'Page Not Found');
+            abort(Response::NOT_FOUND, 'Page Not Found');
         }
 
         [ $controller, $function ] = explode('@', $arguments[0]);
