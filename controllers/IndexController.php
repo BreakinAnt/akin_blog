@@ -21,4 +21,10 @@ class IndexController extends Controller {
 
         $this->render('about', compact('heading'));
     }
+
+    public function test($test, $testa) 
+    {
+        dd($test, $testa);
+        $this->index();
+    }
 }
