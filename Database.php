@@ -2,7 +2,6 @@
 namespace App;
 class Database {
     private $connection, $query, $fields;
-
     public function __construct()
     {
         $host = getenv('DB_HOST') ?: '127.0.0.1';
