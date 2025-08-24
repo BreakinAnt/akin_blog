@@ -19,9 +19,8 @@ class NoteController extends Controller
         $currentUser = 1;
         $heading = 'Note';
 
-        $note = (new Note())->where('id', $noteId);
-        $note = db()->from('notes')->where('id', '=', $noteId)->getOrFail()[0];
-        $user = db()->from('users')->where('id', '=', $note['user_id'])->getOrFail()[0];
+        $note = (new Note())->where('id', $noteId)->first();
+        $user = $note->user();
 
         $this->render('notes/show', compact('heading', 'note', 'user'));
     }
@@ -34,11 +33,12 @@ class NoteController extends Controller
 
     public function store()
     {
-        db()->insert('notes', [
-            'content'      => $_POST['body'],
+        $note = new Note([
+            'content'   => $_POST['body'],
             'user_id'   => 1
         ]);
-
-        $this->redirect('/notes');
+        $note->save();
+  
+        $this->redirect("/note/$note->id");
     }
 }
