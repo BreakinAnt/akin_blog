@@ -4,12 +4,14 @@ namespace App\Models;
 use App\Database;
 
 class Model {
-    protected $table, $db;
+    protected $table, $db, $attributes;
+    public $id;
 
-    public function __construct() 
+    public function __construct($attributes = []) 
     {
         $this->db = (new Database())->from($this->getTable());
         $this->table = $this->getTable();
+        $this->setAttributes($attributes);
     }
 
     public function getTable(): String
@@ -38,10 +40,24 @@ class Model {
         return $this;
     }
 
+    public function save(): Model
+    {
+        if (isset($this->id)) {
+            //TODO: update logic
+            return $this;
+        } else {
+            $result = $this->db->insert($this->table, $this->attributes);
+            $this->id = $result;
+
+            return $this;
+        }
+    }
+
     private function setAttributes($attributes): void
     {
         foreach($attributes as $key => $value) {
             if (property_exists($this, $key)){
+                $this->attributes[$key] = $value;
                 $this->$key = $value;
             }
         }
