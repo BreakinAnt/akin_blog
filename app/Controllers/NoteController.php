@@ -7,9 +7,8 @@ class NoteController extends Controller
     {
         $heading = 'Notes';
 
-        $config = require('config.php');
 
-        $db = new Database($config);
+    $db = new Database();
 
         $notes = $db->from('notes')->get();
 
@@ -18,9 +17,8 @@ class NoteController extends Controller
 
     public function show($noteId)
     {
-        $config = require('config.php');
 
-        $db = new Database($config);
+    $db = new Database();
 
         $currentUser = 1;
         $heading = 'Note';

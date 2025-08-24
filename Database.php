@@ -3,12 +3,19 @@ namespace App;
 class Database {
     private $connection, $query, $fields;
 
-    public function __construct($config)
+    public function __construct()
     {
-    $this->connection = new \PDO(
-            "mysql:host={$config['database']['host']};port={$config['database']['port']};dbname={$config['database']['name']};charset={$config['database']['charset']}", 
-            $config['database']['user'], 
-            $config['database']['password'], 
+        $host = getenv('DB_HOST') ?: '127.0.0.1';
+        $port = getenv('DB_PORT') ?: 3306;
+        $name = getenv('DB_NAME') ?: 'myapp';
+        $charset = getenv('DB_CHARSET') ?: 'utf8mb4';
+        $user = getenv('DB_USER') ?: 'root';
+        $password = getenv('DB_PASSWORD') ?: '';
+
+        $this->connection = new \PDO(
+            "mysql:host={$host};port={$port};dbname={$name};charset={$charset}",
+            $user,
+            $password,
             [
                 \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
             ]
