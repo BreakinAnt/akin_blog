@@ -20,9 +20,7 @@ class RouteServiceProvider
 
                 $cleanUri = str_replace($uriSlugs, '', $uri);
 
-                $uriAndPathIsEqual = $cleanUri === $cleanPath;
-
-                if(!$uriAndPathIsEqual) {
+                if($cleanUri !== $cleanPath) {
                     continue;
                 }
 
