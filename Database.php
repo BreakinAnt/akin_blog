@@ -8,7 +8,7 @@ class Database {
         $port = getenv('DB_PORT') ?: 3306;
         $name = getenv('DB_NAME') ?: 'myapp';
         $charset = getenv('DB_CHARSET') ?: 'utf8mb4';
-        $user = getenv('DB_USER') ?: 'root';
+        $user = getenv('DB_USERNAME') ?: 'root';
         $password = getenv('DB_PASSWORD') ?: '';
 
         $this->connection = new \PDO(
