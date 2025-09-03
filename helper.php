@@ -60,7 +60,8 @@ function urlIs($url) {
 function abort($code = 404) {
     http_response_code($code);
 
-    require "views/errors/$code.php";
+    #TODO: fix view 404 showing up when no error is happening
+    // require "views/errors/$code.php";
 
     die();
 }
