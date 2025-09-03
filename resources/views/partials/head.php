@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="en" class="h-full bg-gray-100">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Akin Blog</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link href="/resources/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="/resources/css/app.css" rel="stylesheet"> -->
 </head>
 
-<body class="h-full">
-<div class="min-h-full">
+<body>
+<div>
