@@ -11,7 +11,7 @@ class NoteController extends Controller
 
         $notes = Note::all();
 
-        $this->render('notes/index', compact('heading', 'notes', 'user'));
+        $this->render('notes/index', compact('heading', 'notes'));
     }
 
     public function show($noteId)
