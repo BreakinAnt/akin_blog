@@ -17,6 +17,7 @@ body {
   user-select: none;         /* Standard syntax */
 }
 
+
 nav {
     display: flex;
     flex-direction: column;
@@ -52,6 +53,11 @@ nav {
     color: #333;
     padding: 10px 0;
     font-size: 18px;
+}
+
+.nav-button-text * {
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav-button-line {
@@ -102,7 +108,7 @@ nav {
 }
 
 main {
-  margin-left: 25%; /* Same as the width of the sidebar */
+  margin-left: 25%; 
   padding: 0px 10px;
   width: 50%;
 }
