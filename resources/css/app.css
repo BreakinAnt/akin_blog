@@ -56,6 +56,9 @@ nav {
 
 .nav-button-line {
     border-bottom: 2px solid transparent;
+    animation-name: border-bottom-unfill;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
 }
 
 .nav-button:hover .nav-button-line {
