@@ -40,14 +40,13 @@ nav {
 .nav-button {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .nav-button-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     text-decoration: none;
     color: #333;
     padding: 10px 0;
@@ -57,6 +56,10 @@ nav {
 .nav-button-text * {
     text-decoration: none;
     color: inherit;
+}
+
+.nav-button-text .url-active {
+    color: rgb(54, 134, 255);
 }
 
 .nav-button-line {
@@ -74,35 +77,35 @@ nav {
 
 @keyframes border-bottom-unfill {
     0% {
-        border-bottom: 2px solid rgb(38, 71, 255);
+        border-bottom: 2px solid rgb(54, 134, 255);
         width: 130%;
     }
 
     50% {
-        border-bottom: 2px solid rgb(38, 71, 255);
+        border-bottom: 2px solid rgb(54, 134, 255);
         width: 150%;
     }
 
     100% {
-        border-bottom: 2px solid rgb(0, 0, 0);
+        border-bottom: 2px solid rgb(54, 134, 255);
         width: 0%;
     }
 }
 
 @keyframes border-bottom-fill {
     0% {
-        border-bottom: 2px solid rgb(0, 0, 0);
+        border-bottom: 2px solid rgb(54, 134, 255);
         width: 0%;
     }
 
     50% {
-        border-bottom: 2px solid rgb(38, 71, 255);
-        width: 150%;
+        border-bottom: 2px solid rgb(54, 134, 255);
+        width: 130%;
     }
 
     100% {
-        border-bottom: 2px solid rgb(38, 71, 255);
-        width: 130%;
+        border-bottom: 2px solid rgb(54, 134, 255);
+        width: 100%;
     }
 }
 
