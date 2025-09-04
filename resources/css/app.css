@@ -10,6 +10,13 @@ body {
     background-color: red;
 }
 
+.no-select {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10+ */
+  user-select: none;         /* Standard syntax */
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -27,6 +34,51 @@ nav {
     z-index: 1001;
     background: #ffffff;
     border-right: 1px solid #e6e6e6;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-button-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.nav-button-line {
+    border-bottom: 2px solid transparent;
+}
+
+.nav-button:hover .nav-button-line {
+    animation-name: border-bottom-fill;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes border-bottom-fill {
+    0% {
+        border-bottom: 2px solid rgb(0, 0, 0);
+        width: 0%;
+    }
+
+    50% {
+        border-bottom: 2px solid rgb(38, 71, 255);
+        width: 150%;
+    }
+
+    100% {
+        border-bottom: 2px solid rgb(38, 71, 255);
+        width: 130%;
+    }
 }
 
 main {
