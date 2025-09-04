@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5em;
+    padding-bottom: 40px;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 25%;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-y: hidden;
+    z-index: 1001;
+    background: #ffffff;
+    border-right: 1px solid #e6e6e6;
+}
+
+main {
+  margin-left: 25%; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+  width: 50%;
+}

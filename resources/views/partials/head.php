@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Akin Blog</title>
     <link href="/resources/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <!-- <link href="/resources/css/app.css" rel="stylesheet"> -->
+    <link href="/resources/css/app.css" rel="stylesheet">
 </head>
 
 <body>
-<div>
+<div id="app">
