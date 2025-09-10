@@ -71,3 +71,11 @@ function authorize($condition, $status = Response::FORBIDDEN) {
         abort($status);
     }
 }
+
+function trimText($text, $maxLength = 100, $ending = '(...)') {
+    if (strlen($text) <= $maxLength) {
+        return $text;
+    }
+
+    return substr($text, 0, $maxLength - strlen($ending)) . $ending;
+}
