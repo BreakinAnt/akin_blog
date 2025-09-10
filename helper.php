@@ -79,3 +79,7 @@ function trimText($text, $maxLength = 100, $ending = '(...)') {
 
     return substr($text, 0, $maxLength - strlen($ending)) . $ending;
 }
+
+function formatDate($date, $format = 'F j, Y') {
+    return date($format, strtotime($date));
+}
