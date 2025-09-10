@@ -1,11 +1,15 @@
 <?php
 namespace App\Controllers;
 
+use App\Models\Post;
+
 class IndexController extends Controller {
     public function index() 
     {
         $heading = 'Home';
-        $this->render('index', compact('heading'));
+        $posts = (new Post())->where('hidden', 0)->get();
+
+        $this->render('index', compact('heading', 'posts'));
     }
 
     public function about() 

@@ -6,7 +6,15 @@
     <p><?= $heading ?></p>
   </div>
   <ul>
-    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>
+    <?php foreach($posts as $post): ?>
+      <li>
+        <article>
+          <h2><?= $post['title'] ?></h2>
+          <p><?= formatDate($post['date']) ?></p>
+          <p><?= trimText($post['content']) ?></p>
+        </article>
+      </li>
+    <?php endforeach; ?>
   </ul>
 </main>
 
