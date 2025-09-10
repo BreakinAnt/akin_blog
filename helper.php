@@ -83,3 +83,7 @@ function trimText($text, $maxLength = 100, $ending = '(...)') {
 function formatDate($date, $format = 'F j, Y') {
     return date($format, strtotime($date));
 }
+
+function getImage($path) {
+    return file_exists($path) ? $path : 'public/images/default.png';
+}
