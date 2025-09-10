@@ -53,8 +53,8 @@ function prettyPrint($var, $indent = 0)
 }
 
 
-function urlIs($url) {
-    return $url === $_SERVER["REQUEST_URI"];
+function urlIs($url, $trueCondition = true, $falseCondition = false) {
+    return $url === $_SERVER["REQUEST_URI"] ? $trueCondition : $falseCondition;
 }
 
 function abort($code = 404) {
