@@ -101,3 +101,41 @@ main {
   padding: 0px 10px;
   width: 50%;
 }
+
+article.post-list {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+}
+
+.post-content span {
+    color: #7e7e7e;
+}
+
+.post-content p {
+    padding: 10px 0;
+}
+
+.post-list .post-header {
+    padding: 10px;
+}
+
+.post-content a {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease-out;
+}
+
+.post-content a * {
+    color: rgb(54, 134, 255);
+    text-align: center;
+}
+
+.post-content a:hover {
+    border-bottom: 1px solid rgb(54, 134, 255);
+}
+
+img.post-banner {
+    max-width: 150px;
+    clip-path: circle();
+}
