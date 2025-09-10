@@ -33,6 +33,18 @@ class Model {
         return $this;
     }
 
+    public function get(): Array
+    {
+        $data = $this->db->get();
+        $list = [];
+        foreach($data as $model) {
+            $this->setAttributes($model);
+            array_push($list, $model);
+        }
+
+        return $list;
+    }
+
     public function first(): static|Model
     {
         $data = $this->db->get()[0];
@@ -55,6 +67,7 @@ class Model {
 
     private function setAttributes($attributes): void
     {
+        // dd($attributes);
         foreach($attributes as $key => $value) {
             if (property_exists($this, $key)){
                 $this->attributes[$key] = $value;
