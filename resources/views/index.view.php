@@ -1,7 +1,7 @@
 <?php require("resources/views/partials/head.php") ?>
 <?php require("resources/views/partials/nav.php") ?>
 
-<main class="border-end border-start border-black">
+<main class="border-end border-start border-secondary">
   <ul>
     <?php foreach($posts as $post): ?>
       <li>
