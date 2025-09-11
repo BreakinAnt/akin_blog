@@ -85,5 +85,10 @@ function formatDate($date, $format = 'F j, Y') {
 }
 
 function getImage($path) {
-    return file_exists($path) ? $path : 'public/images/default.png';
+    $fullPath = __DIR__ . $path;
+    if (file_exists($fullPath) && !is_dir($fullPath)) {
+        return $path;
+    }
+    
+    return '/public/images/default.png';
 }

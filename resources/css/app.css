@@ -146,7 +146,15 @@ article.post-list {
     padding-right: 20px;
 }
 
-img.post-banner {
-    max-width: 150px;
+/* img.post-banner {
+} */
+
+img.post-banner.circle {
     clip-path: circle();
+    max-width: 150px;
+}
+
+img.post-banner.full {
+    max-height: 50vh;
+    max-width: 100%;
 }

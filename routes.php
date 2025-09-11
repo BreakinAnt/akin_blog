@@ -10,5 +10,6 @@ return [
     ),
     '/notes/create' => Router::get('NoteController@create'),
     '/note/{note_id}' => Router::get('NoteController@show'),
+    '/post/{post_slug}' => Router::get('PostController@show'),
     '/contact' => Router::get('IndexController@contact')
 ];
