@@ -104,7 +104,7 @@ main {
 
 article.post-list {
     display: flex;
-    margin: 20px;
+    padding: 30px;
     align-items: center;
 }
 
@@ -117,22 +117,33 @@ article.post-list {
 }
 
 .post-list .post-header {
-    padding: 10px;
+    padding: 0 20px;
 }
 
 .post-content a {
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: all 0.2s ease-out;
+    color: rgb(54, 134, 255);
+    transition: all 0.1s ease-out;
 }
 
-.post-content a * {
+.post-content .post-read-more {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
     color: rgb(54, 134, 255);
-    text-align: center;
+    transition: all 0.1s ease-out;
 }
 
 .post-content a:hover {
-    border-bottom: 1px solid rgb(54, 134, 255);
+    color: rgb(55, 65, 206);
+}
+
+.post-content .post-meta {
+    display: flex;
+}
+
+.post-content .post-meta .post-meta-item {
+    padding-right: 20px;
 }
 
 img.post-banner {
