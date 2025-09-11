@@ -1,7 +1,7 @@
 <?php require("resources/views/partials/head.php") ?>
 <?php require("resources/views/partials/nav.php") ?>
 
-<main class="border-end border-start border-secondary p-5">
+<main class="border-start border-secondary p-5">
   <?php foreach($posts as $post): ?>
       <article class="post-list">
         <div class="post-header">
@@ -21,6 +21,12 @@
                 <iconify-icon icon="solar:folder-linear" width="15" height="15"></iconify-icon> 
                 Technology
               </a>
+            </div>
+            <div class="post-meta-item">
+              <span>
+                <iconify-icon icon="solar:eye-linear" width="15" height="15"></iconify-icon>
+                <?= $post['view_count'] ?>
+              </span>
             </div>
           </div>
           <p><?= trimText($post['description'], 255) ?></p>
