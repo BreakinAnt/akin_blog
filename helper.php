@@ -58,7 +58,7 @@ function urlIs($url, $trueCondition = true, $falseCondition = false) {
 }
 
 function abort($code = 404) {
-    http_response_code($code);
+    // http_response_code($code);
 
     #TODO: fix view 404 showing up when no error is happening
     // require "views/errors/$code.php";
