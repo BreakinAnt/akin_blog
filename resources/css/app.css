@@ -189,8 +189,7 @@ img.post-banner.full {
     padding-right: 0;
 }
 
-.post-content .post-meta .post-meta-item a,
-.post-content .post-meta .post-meta-item span {
+.post-content .post-meta .post-meta-item {
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -203,15 +202,11 @@ img.post-banner.full {
     text-decoration: none;
 }
 
-.post-content .post-meta .post-meta-item a {
+.post-content .post-meta a.post-meta-item {
     color: rgb(54, 134, 255);
 }
 
-.post-content .post-meta .post-meta-item a:hover {
+.post-content .post-meta a.post-meta-item:hover {
     background-color: #e0e0e0;
     color: rgb(35, 72, 233);
-}
-
-footer {
-    display: none;
 }
