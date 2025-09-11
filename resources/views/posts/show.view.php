@@ -2,16 +2,26 @@
 <?php require("resources/views/partials/nav.php") ?>
 
 <main>
-  <div>
-        <div class="post-header" style="--bg-image: url('<?= getImage($post->banner_path) ?>')">
-          <img class="post-banner full" src="<?= getImage($post->banner_path) ?>">
+  <div class="post-header" style="--bg-image: url('<?= getImage($post->banner_path) ?>')">
+    <img class="post-banner full" src="<?= getImage($post->banner_path) ?>">
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+          <article class="p-4">
+            <h1 class="mb-3 text-dark fw-bold"><?= $post->title ?></h1>
+            
+            <p class="text-muted mb-4">
+              By <span class="fw-semibold">Felipe Carneiro</span> • <?= formatDate($post->date) ?>
+            </p>
+            
+            <p>
+              <?= $post->content ?>
+            </p>
+
+            <a href="/">Go Back</a>
+          </article>
         </div>
-        <p>
-            <?= $post->content ?>
-        </p>
-      <p>
-        <a href="/">Go Back</a>
-      </p>
   </div>
 </main>
 
