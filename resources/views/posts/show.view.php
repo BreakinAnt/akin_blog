@@ -3,7 +3,7 @@
 
 <main>
   <div>
-        <div class="post-header">
+        <div class="post-header" style="--bg-image: url('<?= getImage($post->banner_path) ?>')">
           <img class="post-banner full" src="<?= getImage($post->banner_path) ?>">
         </div>
         <p>
