@@ -1,6 +1,6 @@
     <footer>
         <ul>
-            <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>    <li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li><li>AA</li>
+            <li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li>    <li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li>    <li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li>    <li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li>    <li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li>    <li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li>    <li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li>    <li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li>    <li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li>
         </ul>
     </footer>
     </div>
