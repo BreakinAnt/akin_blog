@@ -89,6 +89,9 @@ function getImage($path) {
     if (file_exists($fullPath) && !is_dir($fullPath)) {
         return $path;
     }
+    if (filter_var($path, FILTER_VALIDATE_URL)) {
+        return $path;
+    }
     
     return '/public/images/default.png';
 }
