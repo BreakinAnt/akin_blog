@@ -226,11 +226,13 @@ footer {
     flex: 1;
     height: 100vh;
     width: 10px;
+    word-wrap: break-word;
 }
 
 @media screen and (max-width: 768px) {
     #app {
         flex-direction: column;
+        width: 100%;
     }
 
     nav {
@@ -263,8 +265,20 @@ footer {
         padding: 15px;
     }
 
+    article {
+        text-align: left;
+    }
+
+    .post-content {
+        text-align: center;
+    }
+
     .post-list .post-header {
         padding: 20px 0;
+    }
+
+    footer {
+        word-wrap: break-word;
     }
 }
 
