@@ -228,3 +228,43 @@ footer {
     width: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    #app {
+        flex-direction: column;
+    }
+
+    nav {
+        position: relative;
+        width: 100%;
+        padding: 1vh;
+        overflow-y: visible;
+        border-right: none;
+        border-bottom: 1px solid #e6e6e6;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        top: 0;
+        background: linear-gradient(to bottom, transparent 60%, var(--light-bg-color));
+    }
+
+    main {
+        margin: unset;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .post-meta {
+        justify-content: center;
+    }
+
+    article.post-list {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .post-list .post-header {
+        padding: 20px 0;
+    }
+}
+
