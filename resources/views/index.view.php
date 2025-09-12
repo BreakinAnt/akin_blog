@@ -1,7 +1,7 @@
 <?php require("resources/views/partials/head.php") ?>
 <?php require("resources/views/partials/nav.php") ?>
 
-<main class="border-start border-secondary p-5">
+<main class="p-5">
   <?php foreach($posts as $post): ?>
       <article class="post-list">
         <div class="post-header">
