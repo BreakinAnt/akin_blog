@@ -138,12 +138,16 @@ article.post-list {
 }
 
 
-img.post-banner.circle {
+img.circle {
     clip-path: circle();
     max-width: 150px;
 }
 
-img.post-banner.full {
+img.small {
+    max-width: 80px;
+}
+
+img.full {
     max-height: 50vh;
     max-width: 100%;
 }
