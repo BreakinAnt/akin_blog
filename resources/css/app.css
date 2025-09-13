@@ -181,6 +181,22 @@ img.full {
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(5px);
+  
+  animation: fadeInBackground 2s ease-in-out forwards;
+}
+
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+    background-position: unset;
+  }
+  80% {
+    opacity: 0.95;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .post-list .post-header {
