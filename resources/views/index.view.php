@@ -5,7 +5,7 @@
   <?php foreach($posts as $post): ?>
       <article class="post-list">
         <div class="post-header">
-          <img class="post-banner circle" src="<?= getImage($post['banner_path']) ?>">
+         <a href="/post/<?= $post['slug'] ?>"><img class="post-banner circle" src="<?= getImage($post['banner_path']) ?>"></a>
         </div>
         <div class="post-content">
           <h2>
