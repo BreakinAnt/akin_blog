@@ -8,9 +8,9 @@ class PostController extends Controller
 {
      public function show($noteSlug)
     {
-        $heading = 'Post';
-
         $post = (new Post())->where('slug', $noteSlug)->first();
+
+        $heading = $post->title;
         
         #TODO: Change to increment view count in model save method
         (new Database())->raw("UPDATE posts SET view_count = ? WHERE id = $post->id", [$post->view_count+1]);

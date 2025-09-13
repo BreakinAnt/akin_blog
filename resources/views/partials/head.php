@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Akin Blog</title>
+    <title>Kinu Blog <?= isset($heading) ? "- $heading" : '' ?></title>
     <link href="/resources/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/resources/css/app.css" rel="stylesheet">
 </head>
