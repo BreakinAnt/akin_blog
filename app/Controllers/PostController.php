@@ -9,6 +9,7 @@ class PostController extends Controller
      public function show($noteSlug)
     {
         $post = (new Post())->where('slug', $noteSlug)->first();
+        $post->user = $post->user();
 
         $heading = $post->title;
         
