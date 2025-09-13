@@ -108,7 +108,6 @@ main {
   margin-left: 25%; 
   padding: 0px 10px;
   width: 60%;
-  background: linear-gradient(.25turn, transparent 96%, var(--light-bg-color));
 }
 
 .title-url {
