@@ -239,7 +239,7 @@ a .post-meta-item:hover {
 .post-footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 20px;
     padding: 30px;
     background-color: var(--light-bg-color);
@@ -285,6 +285,7 @@ footer {
         text-align: center;
         background: unset;
     }
+    
 
     .post-meta {
         justify-content: center;
@@ -298,6 +299,11 @@ footer {
     article {
         text-align: left;
     }
+
+    article.post-view {
+        padding: 0px;
+    }
+
 
     .post-content h2 {
         text-align: center;
