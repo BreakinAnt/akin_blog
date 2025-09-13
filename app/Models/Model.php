@@ -67,7 +67,6 @@ class Model {
 
     private function setAttributes($attributes): void
     {
-        // dd($attributes);
         foreach($attributes as $key => $value) {
             if (property_exists($this, $key)){
                 $this->attributes[$key] = $value;
