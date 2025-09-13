@@ -318,3 +318,36 @@ footer {
     }
 }
 
+.about-page {
+    padding: 40px;
+    text-align: center;
+}
+
+.about-logo {
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid var(--light-bg-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
