@@ -139,11 +139,15 @@ article.post-list {
 
 img.circle {
     clip-path: circle();
+    max-width: 200px;
+}
+
+img.medium {
     max-width: 150px;
 }
 
 img.small {
-    max-width: 80px;
+    max-width: 65px;
 }
 
 img.full {
@@ -155,13 +159,11 @@ img.full {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: -1;
 
   display: block;
   background-image: var(--bg-image);
-  background-size:cover;
+  background-size: cover;
   background-position: center center;
   width: 100%;
   height: 100%;
@@ -229,6 +231,19 @@ a .post-meta-item:hover {
     color: rgb(30, 26, 226);
 }
 
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: var(--light-bg-color);
+}
+
+.post-footer div {
+    margin-right: 30px;
+}
+
 footer {
     background-color: var(--light-bg-color);
     width: 10%;
@@ -279,7 +294,7 @@ footer {
         text-align: left;
     }
 
-    .post-content {
+    .post-content h2 {
         text-align: center;
     }
 
