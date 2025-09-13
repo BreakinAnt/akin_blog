@@ -121,6 +121,11 @@ article.post-list {
     align-items: center;
 }
 
+article.post-view {
+    display: block;
+    padding: 50px 10%;
+}
+
 .post-content span {
     color: #7e7e7e;
 }
@@ -143,7 +148,7 @@ img.circle {
 }
 
 img.medium {
-    max-width: 150px;
+    max-width: 120px;
 }
 
 img.small {

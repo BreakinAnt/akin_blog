@@ -8,7 +8,7 @@
 
   <div class="container">
     <div class="row justify-content-center">
-          <article class="p-4">
+          <article class="post-view">
             <h1 class="mb-3 text-dark fw-bold"><?= $post->title ?></h1>
             
             <p class="text-muted mb-4">
