@@ -8,7 +8,11 @@
           <img class="post-banner circle" src="<?= getImage($post['banner_path']) ?>">
         </div>
         <div class="post-content">
-          <h2><?= $post['title'] ?></h2>
+          <h2>
+            <a class="title-url" href="/post/<?= $post['slug'] ?>">
+              <?= $post['title'] ?>
+            </a>
+          </h2>
           <div class="post-meta">
               <span class="post-meta-item">
                 <iconify-icon icon="solar:calendar-linear" width="15" height="15"></iconify-icon> 

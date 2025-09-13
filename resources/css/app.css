@@ -111,6 +111,11 @@ main {
   background: linear-gradient(.25turn, transparent 96%, var(--light-bg-color));
 }
 
+.title-url {
+    text-decoration: none;
+    color: black;
+}
+
 article.post-list {
     display: flex;
     padding: 30px;
@@ -169,7 +174,8 @@ img.post-banner.full {
     padding: 0 20px;
 }
 
-.post-content a {
+a .post-meta-item {
+    background-color: red; 
     text-decoration: none;
     color: rgb(54, 134, 255);
     transition: all 0.1s ease-out;
@@ -183,8 +189,8 @@ img.post-banner.full {
     transition: all 0.1s ease-out;
 }
 
-.post-content a:hover {
-    color: rgb(35, 72, 233);
+a .post-meta-item:hover {
+    color: rgb(30, 26, 226);
 }
 
 .post-content .post-meta {
@@ -217,7 +223,7 @@ img.post-banner.full {
 
 .post-content .post-meta a.post-meta-item:hover {
     background-color: #e0e0e0;
-    color: rgb(35, 72, 233);
+    color: rgb(30, 26, 226);
 }
 
 footer {
