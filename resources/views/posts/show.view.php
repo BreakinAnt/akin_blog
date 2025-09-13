@@ -12,14 +12,32 @@
             <h1 class="mb-3 text-dark fw-bold"><?= $post->title ?></h1>
             
             <p class="text-muted mb-4">
-              By <span class="fw-semibold">Felipe Carneiro</span> • <?= formatDate($post->date) ?>
+              By <span class="fw-semibold"><?= $post->user->name ?></span> • <?= formatDate($post->date) ?>
             </p>
             
             <p>
               <?= $post->content ?>
             </p>
 
-            <a href="/">Go Back</a>
+            <div class="post-footer">
+              <div>
+                <img class="circle medium" src="<?= $post->user->photo_path ?>"/>
+              </div>
+              <div>
+                <h4><?= $post->user->name ?></h4>
+                <p><?= $post->user->bios ?></p>
+              </div>
+            </div>
+
+            <!-- <div class="mt-5">
+              <script src="https://utteranc.es/client.js"
+                  repo="BreakinAnt/akin_blog"
+                  issue-term="pathname"
+                  theme="github-light"
+                  crossorigin="anonymous"
+                  async>
+              </script>
+            </div> -->
           </article>
         </div>
   </div>
