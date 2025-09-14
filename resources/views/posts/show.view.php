@@ -44,3 +44,4 @@
 </main>
 
 <?php require("resources/views/partials/footer.php") ?>
+<?php require("resources/views/partials/end.php") ?>
