@@ -5,6 +5,11 @@
   --grey-bg-color: #c5c5c5;
 }
 
+html {
+    min-height: 100%;
+    height: 100%;
+}
+
 body {
     display: block;
     font-family: "DM Mono", "monospace", Arial, sans-serif;
@@ -107,10 +112,12 @@ nav {
 }
 
 main {
-  margin-left: 25%; 
-  padding: 0px 10px;
-  width: 60%;
-  transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+    flex: 1;
+    margin-left: 25%; 
+    padding: 0px 10px;
+    width: 60%;
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+    min-height: 100vh;
 }
 
 .title-url {
@@ -270,21 +277,18 @@ a .post-meta-item:hover {
 
 footer {
     background-color: var(--light-bg-color);
-    width: 10%;
-    flex: 1;
-    height: 100vh;
-    width: 10px;
+    width: 350px;
     word-wrap: break-word;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     #app {
         flex-direction: column;
         width: 100%;
     }
 
     nav {
-        position: relative;
+        position: fixed;
         width: 100%;
         padding: 1vh;
         overflow-y: visible;
@@ -294,6 +298,7 @@ footer {
         justify-content: space-around;
         align-items: center;
         top: 0;
+        bottom: unset;
     }
 
     main {
