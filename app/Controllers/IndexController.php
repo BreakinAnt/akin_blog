@@ -7,7 +7,7 @@ class IndexController extends Controller {
     public function index() 
     {
         $heading = 'Home';
-        $posts = (new Post())->where('hidden', 0)->get();
+        $posts = (new Post())->where('hidden', 0)->orderBy('date', 'desc')->get();
 
         $this->render('index', compact('heading', 'posts'));
     }
