@@ -1,6 +1,6 @@
     <footer>
-        <ul>
+        <!-- <ul>
             <li>LoremLoremLoremLoremLoremLoremLoremLoremLoremLorem</li>
             <li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li><li>Lorem</li>  
-        </ul>
+        </ul> -->
     </footer>
