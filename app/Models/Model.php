@@ -33,6 +33,12 @@ class Model {
         return $this;
     }
 
+    public function orderBy($column, $direction = 'asc'): static|Model
+    {
+        $this->db->setQuery($this->db->getQuery()." order by $column $direction", []);
+        return $this;
+    }
+
     public function get(): Array
     {
         $data = $this->db->get();

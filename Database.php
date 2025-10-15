@@ -100,9 +100,14 @@ class Database {
         return $query;
     }
 
-    private function getQuery()
+    public function getQuery()
     {
         return $this->query;
+    }
+
+    public function setQuery($query)
+    {
+        $this->query = $query;
     }
 
     private function execute($fields = [])
