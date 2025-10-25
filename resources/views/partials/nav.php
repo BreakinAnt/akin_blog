@@ -1,39 +1,38 @@
+<nav class="sidebar no-select">
+  <div class="brand">
+    <div class="brand-logo">K</div>
+    <p class="brand-tagline">Building ideas in public.<br>One experiment at a time.</p>
+  </div>
 
-<nav class="no-select">
-  <div class="nav-button">
-    <div class="nav-button-text">
-      <a href="/" class="<?php echo urlIs("/", 'url-active', 'url-inactive') ?>">Home</a>
-      <div class="nav-button-line <?php echo urlIs("/", 'url-active', 'url-inactive') ?>"></div>
-    </div>
+  <ul class="nav-links">
+    <li>
+      <a href="/" class="nav-link <?php echo urlIs("/", 'is-active', '') ?>">
+        <iconify-icon icon="solar:home-2-line-duotone"></iconify-icon>
+        <span>Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="/about" class="nav-link <?php echo urlIs("/about", 'is-active', '') ?>">
+        <iconify-icon icon="solar:user-circle-line-duotone"></iconify-icon>
+        <span>About</span>
+      </a>
+    </li>
+    <li>
+      <a href="/notes" class="nav-link <?php echo urlIs("/notes", 'is-active', '') ?>">
+        <iconify-icon icon="solar:notes-minimalistic-line-duotone"></iconify-icon>
+        <span>Notes</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="sidebar-footer">
+    <a href="https://github.com/BreakinAnt/akin_blog" class="pill-link" target="_blank" rel="noreferrer">
+      <iconify-icon icon="solar:github-line-duotone"></iconify-icon>
+      <span>GitHub</span>
+    </a>
+    <a href="https://www.linkedin.com/in/felipesan08/" class="primary-button" target="_blank" rel="noreferrer">
+      <iconify-icon icon="solar:linkedin-outline"></iconify-icon>
+      <span>LinkedIn</span>
+    </a>
   </div>
-  <div class="nav-button">
-    <div class="nav-button-text">
-      <a href="/about" class="<?php echo urlIs("/about", 'url-active', 'url-inactive') ?>" >About</a>
-      <div class="nav-button-line <?php echo urlIs("/about", 'url-active', 'url-inactive') ?>"></div>
-    </div>
-  </div>
-  <div class="nav-button">
-    <div class="nav-button-text">
-      <a href="https://github.com/BreakinAnt/akin_blog" class="url-inactive" >Git</a>
-      <div class="nav-button-line url-inactive"></div>
-    </div>
-  </div>
-  <div class="nav-button">
-    <div class="nav-button-text">
-      <a href="https://www.linkedin.com/in/felipesan08/" class="url-inactive" >LinkedIn</a>
-      <div class="nav-button-line url-inactive"></div>
-    </div>
-  </div>
-  <!-- <div class="nav-button">
-    <div class="nav-button-text">
-      <a href="/notes" class="<?php echo urlIs("/notes", 'url-active', 'url-inactive') ?>" >Notes</a>
-      <div class="nav-button-line <?php echo urlIs("/notes", 'url-active', 'url-inactive') ?>"></div>
-    </div>
-  </div>
-  <div class="nav-button">
-    <div class="nav-button-text">
-      <a href="/contact" class="<?php echo urlIs("/contact", 'url-active', 'url-inactive') ?>" >Contact</a>
-      <div class="nav-button-line <?php echo urlIs("/contact", 'url-active', 'url-inactive') ?>"></div>
-    </div>
-  </div> -->
 </nav>
