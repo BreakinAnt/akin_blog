@@ -1,23 +1,29 @@
 <?php require("resources/views/partials/head.php") ?>
 <?php require("resources/views/partials/nav.php") ?>
 
-<main class="reading-layout">
-  <header class="reading-hero" style="--hero-image: url('<?= getImage($post->banner_path) ?>')">
-    <div class="reading-hero__media">
-      <img src="<?= getImage($post->banner_path) ?>" alt="<?= $post->title ?> banner" class="reading-hero__image">
-    </div>
-    <div class="reading-hero__content">
+<main class="page-shell article-page">
+  <header class="article-header">
+    <div class="article-header__meta">
       <span class="meta-chip">
         <iconify-icon icon="solar:calendar-linear"></iconify-icon>
         <?= formatDate($post->date) ?>
       </span>
-      <h1><?= $post->title ?></h1>
-      <p><?= trimText($post->description ?? '', 180) ?></p>
+      <span class="meta-chip">
+        <iconify-icon icon="solar:notebook-line-duotone"></iconify-icon>
+        In-depth note
+      </span>
     </div>
-  </header>
 
-  <article class="reading-article">
-    <div class="reading-article__meta">
+    <div class="article-header__media">
+      <img src="<?= getImage($post->banner_path) ?>" alt="<?= $post->title ?> banner">
+    </div>
+
+    <div class="article-header__body">
+      <h1 class="title-lg"><?= $post->title ?></h1>
+      <p><?= trimText($post->description ?? '', 220) ?></p>
+    </div>
+
+    <div class="article-meta-tray">
       <div class="author">
         <img src="<?= $post->user->photo_path ?>" alt="<?= $post->user->name ?>" class="author-avatar">
         <div>
@@ -30,10 +36,10 @@
         <span><?= $post->view_count ?> views</span>
       </div>
     </div>
+  </header>
 
-    <div class="reading-article__content">
-      <?= $post->content ?>
-    </div>
+  <article class="article-content">
+    <?= $post->content ?>
   </article>
 </main>
 

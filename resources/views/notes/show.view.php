@@ -1,16 +1,29 @@
 <?php require("resources/views/partials/head.php") ?>
 <?php require("resources/views/partials/nav.php") ?>
 
-<main>
-  <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <p href="<?= "note?id=".$note->id ?>">
-            <?= $note->content ?>
-        </p>
-        <p>By <?= $user->name ?></p>
-      <p>
-        <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="/notes">Go Back</a>
-      </p>
-  </div>
+<main class="page-shell note-editor">
+  <article class="form-panel">
+    <header>
+      <span class="eyebrow">
+        <iconify-icon icon="solar:notebook-line-duotone"></iconify-icon>
+        Note #<?= $note->id ?>
+      </span>
+      <h1 class="title-lg">Captured by <?= $user->name ?></h1>
+      <p>A quick snapshot from the workbench.</p>
+    </header>
+
+    <div>
+      <p><?= nl2br(htmlspecialchars($note->content)) ?></p>
+    </div>
+
+    <div class="form-actions">
+      <a class="button-secondary" href="/notes">
+        <iconify-icon icon="solar:arrow-left-line-duotone"></iconify-icon>
+        Back to notes
+      </a>
+    </div>
+  </article>
 </main>
 
 <?php require("resources/views/partials/footer.php") ?>
+<?php require("resources/views/partials/end.php") ?>

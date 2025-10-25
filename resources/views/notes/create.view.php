@@ -1,31 +1,36 @@
 <?php require("resources/views/partials/head.php") ?>
 <?php require("resources/views/partials/nav.php") ?>
 
-<main>
-  <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-    <form action="/notes" method="POST">
-      <div class="space-y-12">
-        <div class="border-b border-gray-900/10 pb-12">
-          <h2 class="text-base/7 font-semibold text-gray-900">Create a Note</h2>
+<main class="page-shell note-editor">
+  <div class="form-panel">
+    <header>
+      <span class="eyebrow">
+        <iconify-icon icon="solar:add-circle-line-duotone"></iconify-icon>
+        Create note
+      </span>
+      <h1 class="title-lg">Capture a new idea</h1>
+      <p>Drop a quick observation, an experiment log, or a reminder for future you.</p>
+    </header>
 
-          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-            <div class="col-span-full">
-              <label for="body" class="block text-sm/6 font-medium text-gray-900">Body</label>
-              <div class="mt-2">
-                <textarea name="body" id="body" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
-              </div>
-              <p class="mt-3 text-sm/6 text-gray-600">Write your note.</p>
-            </div>
-          </div>
-        </div>
+    <form action="/notes" method="POST" class="note-form">
+      <div>
+        <label for="body">Body</label>
+        <textarea name="body" id="body" placeholder="What are you exploring right now?"><?= htmlspecialchars($_POST['body'] ?? '') ?></textarea>
       </div>
 
-      <div class="mt-6 flex items-center justify-end gap-x-6">
-        <button type="button" class="text-sm/6 font-semibold text-gray-900">Cancel</button>
-        <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+      <div class="form-actions">
+        <a href="/notes" class="button-secondary">
+          <iconify-icon icon="solar:arrow-left-line-duotone"></iconify-icon>
+          Cancel
+        </a>
+        <button type="submit" class="button">
+          <iconify-icon icon="solar:upload-linear"></iconify-icon>
+          Save note
+        </button>
       </div>
     </form>
   </div>
 </main>
 
 <?php require("resources/views/partials/footer.php") ?>
+<?php require("resources/views/partials/end.php") ?>

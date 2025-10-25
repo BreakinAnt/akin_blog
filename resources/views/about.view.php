@@ -1,17 +1,22 @@
 <?php require("resources/views/partials/head.php") ?>
 <?php require("resources/views/partials/nav.php") ?>
 
-<main class="about-page">
-    <div>
-        <img class="about-logo" src="../../public/favicon_io/android-chrome-512x512.png" alt="Kinu.blog Logo">
-    </div>
-    <div class="about-content">
-        <p>Kinu.blog (Akin Blog) is a small blog engine built in pure PHP. No frameworks, no heavy setup. Just a simple MVC structure with routing, controllers, models, and a MySQL database.</p>
-
-        <p>The main goal right now is to use this as a study project. I want to experiment with PHP concepts and patterns by building things from scratch, without the abstractions that frameworks usually give you. At the same time, the plan is to keep improving it and eventually use it as my own personal blog.</p>
-
-        <p>Since this project is mostly for study purposes, especially for experimenting with more advanced PHP features and practical concepts that are usually hidden away when using big frameworks. You'll find things like type hints, return types, relationships in models, and some custom routing solutions. It's a place to try out ideas, experiment and see how various good code practices actually work when you put them together from scratch.</p>
-    </div>
+<main class="page-shell about-page">
+    <section class="about-layout">
+        <div class="about-logo-card">
+            <img src="../../public/storage/doggies/f.png" alt="Kinu.blog logomark">
+        </div>
+        <div class="about-copy">
+            <span class="eyebrow">
+                <iconify-icon icon="solar:compass-line-duotone"></iconify-icon>
+                About the studio
+            </span>
+            <h1 class="title-lg">Kinu.blog is a personal lab for building in the open.</h1>
+            <p>Kinu.blog (Akin Blog) is a lean publishing engine written in pure PHP. No frameworks, no scaffolding—just a hand-built MVC stack with routing, controllers, models, and a MySQL data layer.</p>
+            <p>The project doubles as a long-term study diary. It is where I experiment with language features, iterate on architecture ideas, and ship small utilities without the comfort blanket of third-party abstractions.</p>
+            <p>Inside you will find type-safe models, relationship helpers, custom routing, and other pragmatic patterns stitched together from scratch. It is equal parts sandbox and portfolio: a place to practice deliberate craftsmanship while sharing the process in public.</p>
+        </div>
+    </section>
 </main>
 
 <?php require("resources/views/partials/footer.php") ?>
