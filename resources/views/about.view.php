@@ -3,7 +3,7 @@
 
 <main class="about-page">
     <div>
-        <img class="about-logo" src="../../public/storage/doggies/f.png" alt="Kinu.blog Logo">
+        <img class="about-logo" src="../../public/favicon_io/android-chrome-512x512.png" alt="Kinu.blog Logo">
     </div>
     <div class="about-content">
         <p>Kinu.blog (Akin Blog) is a small blog engine built in pure PHP. No frameworks, no heavy setup. Just a simple MVC structure with routing, controllers, models, and a MySQL database.</p>
