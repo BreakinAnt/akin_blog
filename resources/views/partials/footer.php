@@ -7,7 +7,6 @@
         <div class="footer-links">
             <a href="/">Home</a>
             <a href="/about">About</a>
-            <a href="/notes">Notes</a>
             <a href="https://github.com/BreakinAnt/akin_blog" target="_blank" rel="noreferrer">GitHub</a>
         </div>
     </div>

@@ -18,10 +18,6 @@
           <iconify-icon icon="solar:user-circle-line-duotone"></iconify-icon>
           <span>About</span>
         </a>
-        <a href="/notes" class="nav-link <?php echo urlIs("/notes", 'is-active', '') ?>">
-          <iconify-icon icon="solar:notes-minimalistic-line-duotone"></iconify-icon>
-          <span>Notes</span>
-        </a>
       </nav>
 
       <div class="nav-actions">
