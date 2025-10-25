@@ -4,7 +4,7 @@
 <main class="page-shell about-page">
     <section class="about-layout">
         <div class="about-logo-card">
-            <img src="../../public/storage/doggies/f.png" alt="Kinu.blog logomark">
+            <img src="/public/favicon_io/android-chrome-512x512.png" alt="Kinu.blog logomark">
         </div>
         <div class="about-copy">
             <span class="eyebrow">

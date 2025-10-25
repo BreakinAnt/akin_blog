@@ -2,7 +2,7 @@
   <div class="page-shell">
     <div class="nav-bar">
       <a href="/" class="nav-brand">
-        <span class="brand-badge">K</span>
+        <span class="brand-badge"><img src="/public/favicon_io/android-chrome-512x512.png"/></span>
         <div class="brand-copy">
           <span class="brand-title">Akin Studio</span>
           <span class="brand-subtitle">Field Notes & Experiments</span>
